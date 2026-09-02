@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0b0f19] text-slate-100 font-sans antialiased;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Cheat Sheet Overlay Badge Highlight */
+.qa-cheat-sheet-active [data-testid] {
+  position: relative !important;
+  outline: 2px dashed rgba(20, 184, 166, 0.75) !important;
+  outline-offset: 2px !important;
+}
+
+.qa-cheat-sheet-active [data-testid]::after {
+  content: attr(data-testid);
+  position: absolute;
+  top: -12px;
+  right: -4px;
+  background-color: #14b8a6;
+  color: #042f2e;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  z-index: 9999;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  white-space: nowrap;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

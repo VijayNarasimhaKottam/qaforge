@@ -1,0 +1,162 @@
+export interface SelectorEntry {
+  module: string;
+  route: string;
+  testId: string;
+  elementType: 'Button' | 'Input' | 'Select' | 'Table' | 'Modal' | 'Checkbox' | 'Container' | 'Custom';
+  description: string;
+  stable: boolean;
+}
+
+export const SITEMAP_SELECTORS: SelectorEntry[] = [
+  // Header / Global
+  { module: 'Global', route: 'All Pages', testId: 'brand-logo', elementType: 'Custom', description: 'QAForge brand logo link in navbar', stable: true },
+  { module: 'Global', route: 'All Pages', testId: 'toggle-cheat-sheet', elementType: 'Button', description: 'Toggle button to turn on/off data-testid overlay badges', stable: true },
+  { module: 'Global', route: 'All Pages', testId: 'nav-forms', elementType: 'Button', description: 'Navigation link to Form Fields module', stable: true },
+  { module: 'Global', route: 'All Pages', testId: 'nav-data-grid', elementType: 'Button', description: 'Navigation link to Data Grid module', stable: true },
+  { module: 'Global', route: 'All Pages', testId: 'nav-dialogs', elementType: 'Button', description: 'Navigation link to Dialogs & Frames module', stable: true },
+  { module: 'Global', route: 'All Pages', testId: 'nav-widgets', elementType: 'Button', description: 'Navigation link to Interactive Widgets module', stable: true },
+  { module: 'Global', route: 'All Pages', testId: 'nav-interactions', elementType: 'Button', description: 'Navigation link to Drag, Drop & Canvas module', stable: true },
+  { module: 'Global', route: 'All Pages', testId: 'nav-store', elementType: 'Button', description: 'Navigation link to Auth & Mini Store module', stable: true },
+  { module: 'Global', route: 'All Pages', testId: 'nav-challenges', elementType: 'Button', description: 'Navigation link to Advanced Challenges module', stable: true },
+  { module: 'Global', route: 'All Pages', testId: 'nav-sitemap', elementType: 'Button', description: 'Navigation link to Sitemap & Selector Cheat Sheet page', stable: true },
+
+  // Module 0: Web Elements
+  { module: 'Module 0: Elements', route: '/elements', testId: 'input-textbox-name', elementType: 'Input', description: 'Full name text box input', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'input-textbox-email', elementType: 'Input', description: 'Email address text box input', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'input-textbox-current-address', elementType: 'Input', description: 'Current address multi-line text input', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'input-textbox-permanent-address', elementType: 'Input', description: 'Permanent address multi-line text input', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-submit-textbox', elementType: 'Button', description: 'Submit text box form button', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'output-text-box', elementType: 'Container', description: 'Rendered text box output card', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'checkbox-desktop', elementType: 'Checkbox', description: 'Desktop folder tree checkbox', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'checkbox-documents', elementType: 'Checkbox', description: 'Documents folder tree checkbox', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'checkbox-downloads', elementType: 'Checkbox', description: 'Downloads folder tree checkbox', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'checkbox-result-output', elementType: 'Container', description: 'Selected checkboxes output text', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'radio-yes', elementType: 'Custom', description: 'Radio button option: Yes', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'radio-impressive', elementType: 'Custom', description: 'Radio button option: Impressive', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'radio-no', elementType: 'Custom', description: 'Disabled radio button option: No', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'radio-result-output', elementType: 'Container', description: 'Selected radio option output display', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-double-click', elementType: 'Button', description: 'Button requiring double-click (onDoubleClick)', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-right-click', elementType: 'Button', description: 'Button requiring context right-click (onContextMenu)', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-dynamic-click', elementType: 'Button', description: 'Standard dynamic click button', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-hover-me', elementType: 'Button', description: 'Hover button triggering tooltip on mouseEnter', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-hover-tooltip', elementType: 'Button', description: 'Hover me button triggering "You hovered over the Button" tooltip', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'hover-button-tooltip', elementType: 'Container', description: 'Button tooltip element displayed on hover', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'input-hover-tooltip', elementType: 'Input', description: 'Text input triggering "You hovered over the text field" tooltip', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'hover-input-tooltip', elementType: 'Container', description: 'Text input tooltip element displayed on hover', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'link-hover-tooltip', elementType: 'Custom', description: 'Text link triggering "You hovered over the Contrary link" tooltip', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'hover-link-tooltip', elementType: 'Container', description: 'Text link tooltip element displayed on hover', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-download-sample', elementType: 'Button', description: 'Download sampleFile.txt file button', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'input-upload-file', elementType: 'Input', description: 'Standard file upload input element', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-enable-5s', elementType: 'Button', description: 'Button that becomes enabled after 5s timer', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-color-change', elementType: 'Button', description: 'Button that changes text color to red after 5s', stable: true },
+  { module: 'Module 0: Elements', route: '/elements', testId: 'btn-visible-5s', elementType: 'Button', description: 'Button that becomes visible after 5s timer', stable: true },
+
+  // Module 1: Forms
+  { module: 'Module 1: Forms', route: '/forms', testId: 'input-username', elementType: 'Input', description: 'Username text field', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'input-email', elementType: 'Input', description: 'Email address input field', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'input-password', elementType: 'Input', description: 'Password input field', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'password-strength-indicator', elementType: 'Container', description: 'Password strength indicator badge (Weak/Medium/Strong)', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'select-country-code', elementType: 'Select', description: 'Phone country code dropdown', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'input-phone-number', elementType: 'Input', description: 'Phone number input field', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'dob-picker-button', elementType: 'Button', description: 'Custom Date of Birth picker trigger button', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'dob-calendar-popover', elementType: 'Container', description: 'Custom calendar grid dropdown container', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'file-dropzone', elementType: 'Container', description: 'Drag-and-drop file upload container area', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'file-input-hidden', elementType: 'Input', description: 'Hidden file input element', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'uploaded-file-name', elementType: 'Container', description: 'Display label for uploaded file name', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'textarea-bio', elementType: 'Input', description: 'Multi-line biography textarea input', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'char-counter', elementType: 'Container', description: 'Live character counter badge (e.g. 42/200)', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'multi-select-input', elementType: 'Input', description: 'Searchable multi-select tag input text area', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'tag-chip-{name}', elementType: 'Custom', description: 'Selected skill tag chip element', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'signature-canvas', elementType: 'Custom', description: 'HTML5 canvas signature pad', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'btn-clear-signature', elementType: 'Button', description: 'Clear signature canvas button', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'btn-submit-form', elementType: 'Button', description: 'Submit registration form button', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'error-username', elementType: 'Container', description: 'Inline validation error message for username', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'error-email', elementType: 'Container', description: 'Inline validation error message for email', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'error-password', elementType: 'Container', description: 'Inline validation error message for password', stable: true },
+  { module: 'Module 1: Forms', route: '/forms', testId: 'submitted-json-container', elementType: 'Container', description: 'Read-only formatted JSON display container for submitted data', stable: true },
+
+  // Module 2: Data Grid
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'input-grid-search', elementType: 'Input', description: 'Global table search input filter', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'select-dept-filter', elementType: 'Select', description: 'Department filter dropdown', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'btn-columns-menu', elementType: 'Button', description: 'Toggle menu for showing/hiding table columns', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'btn-export-csv', elementType: 'Button', description: 'Export table data to CSV file download button', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'employee-table', elementType: 'Table', description: 'Main employee directory data grid table', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'select-all-checkbox', elementType: 'Checkbox', description: 'Header bulk select all rows checkbox', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'floating-action-bar', elementType: 'Container', description: 'Floating action bar for bulk operations (visible when >=1 row selected)', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'btn-bulk-delete', elementType: 'Button', description: 'Bulk delete selected rows button in floating bar', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'btn-row-edit-{id}', elementType: 'Button', description: 'Inline row edit button for employee ID', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'btn-row-save-{id}', elementType: 'Button', description: 'Save inline edited employee row', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'btn-row-cancel-{id}', elementType: 'Button', description: 'Cancel inline edit for employee row', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'pagination-prev', elementType: 'Button', description: 'Previous table page button', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'pagination-next', elementType: 'Button', description: 'Next table page button', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'tab-slow-network', elementType: 'Button', description: 'Switch tab to simulated 2.5s slow network table', stable: true },
+  { module: 'Module 2: Data Grid', route: '/data-grid', testId: 'skeleton-loader', elementType: 'Container', description: 'Loading skeleton row state during slow network fetch', stable: true },
+
+  // Module 3: Dialogs & Frames
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-trigger-alert', elementType: 'Button', description: 'Trigger native window.alert dialog button', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-trigger-confirm', elementType: 'Button', description: 'Trigger native window.confirm dialog button', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-trigger-prompt', elementType: 'Button', description: 'Trigger native window.prompt dialog button', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'native-result-text', elementType: 'Container', description: 'Output text showing result of native browser dialog', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-open-confirm-modal', elementType: 'Button', description: 'Open custom confirm-delete modal dialog', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'modal-confirm-delete', elementType: 'Modal', description: 'Confirm deletion custom modal backdrop & card', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-open-parent-modal', elementType: 'Button', description: 'Open parent modal for nested modal demonstration', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-open-child-modal', elementType: 'Button', description: 'Button inside parent modal to open child nested modal', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-open-scroll-modal', elementType: 'Button', description: 'Open modal with scrollable region & form', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'link-open-tab', elementType: 'Custom', description: 'Link to open page in new browser tab', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-open-popup-window', elementType: 'Button', description: 'Button to trigger window.open() popup window', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'iframe-same-origin', elementType: 'Custom', description: 'Same-origin iframe container frame', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'iframe-nested-outer', elementType: 'Custom', description: 'Outer iframe containing nested inner iframe', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-toast-success', elementType: 'Button', description: 'Trigger success toast notification button', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'btn-toast-error', elementType: 'Button', description: 'Trigger error toast notification button', stable: true },
+  { module: 'Module 3: Dialogs', route: '/dialogs', testId: 'toast-container', elementType: 'Container', description: 'Toast notification stack container area', stable: true },
+
+  // Module 4: Widgets
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'accordion-header-1', elementType: 'Button', description: 'Header button for accordion item 1', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'tab-button-profile', elementType: 'Button', description: 'Tab switcher button for Profile tab', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'tree-node-{path}', elementType: 'Button', description: 'Collapsible tree view directory node toggle', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'input-autocomplete', elementType: 'Input', description: 'Debounced search input field', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'autocomplete-dropdown', elementType: 'Container', description: 'Autocomplete search results dropdown container', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'range-slider', elementType: 'Input', description: 'Custom range slider input control', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'star-rating-{val}', elementType: 'Button', description: 'Interactive star rating button (1 to 5 stars)', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'input-color-picker', elementType: 'Input', description: 'Color picker input control', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'wizard-next-btn', elementType: 'Button', description: 'Next step button in 3-step wizard', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'tooltip-hover-trigger', elementType: 'Button', description: 'Hover-triggered tooltip target button', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'popover-click-trigger', elementType: 'Button', description: 'Click-triggered popover target button', stable: true },
+  { module: 'Module 4: Widgets', route: '/widgets', testId: 'btn-load-more', elementType: 'Button', description: 'Load more items button variant', stable: true },
+
+  // Module 5: Interactions
+  { module: 'Module 5: Interactions', route: '/interactions', testId: 'kanban-column-todo', elementType: 'Container', description: 'Kanban column container for To Do tasks', stable: true },
+  { module: 'Module 5: Interactions', route: '/interactions', testId: 'kanban-card-{id}', elementType: 'Container', description: 'Draggable kanban card element', stable: true },
+  { module: 'Module 5: Interactions', route: '/interactions', testId: 'splitter-bar', elementType: 'Container', description: 'Resizable panel vertical splitter drag handle', stable: true },
+  { module: 'Module 5: Interactions', route: '/interactions', testId: 'btn-open-draggable-modal', elementType: 'Button', description: 'Open draggable & resizable modal dialog button', stable: true },
+  { module: 'Module 5: Interactions', route: '/interactions', testId: 'sortable-item-{id}', elementType: 'Container', description: 'Sortable list item handle', stable: true },
+  { module: 'Module 5: Interactions', route: '/interactions', testId: 'btn-save-order', elementType: 'Button', description: 'Save reordered list button', stable: true },
+  { module: 'Module 5: Interactions', route: '/interactions', testId: 'drawing-canvas', elementType: 'Custom', description: 'HTML5 drawing canvas element', stable: true },
+  { module: 'Module 5: Interactions', route: '/interactions', testId: 'btn-clear-canvas', elementType: 'Button', description: 'Clear drawing canvas button', stable: true },
+
+  // Module 6: Auth & Accounts
+  { module: 'Module 6: Auth', route: '/login', testId: 'input-login-email', elementType: 'Input', description: 'Account login email address input', stable: true },
+  { module: 'Module 6: Auth', route: '/login', testId: 'input-login-password', elementType: 'Input', description: 'Account login password input', stable: true },
+  { module: 'Module 6: Auth', route: '/login', testId: 'btn-submit-login', elementType: 'Button', description: 'Authenticate login & issue JWT token button', stable: true },
+  { module: 'Module 6: Auth', route: '/login', testId: 'btn-quick-fill-user', elementType: 'Button', description: 'Quick-fill credentials for normal user account', stable: true },
+  { module: 'Module 6: Auth', route: '/login', testId: 'btn-quick-fill-admin', elementType: 'Button', description: 'Quick-fill credentials for admin account', stable: true },
+  { module: 'Module 6: Auth', route: '/login', testId: 'btn-logout', elementType: 'Button', description: 'Terminates active session token', stable: true },
+  { module: 'Module 6: Auth', route: '/login', testId: 'session-jwt-display', elementType: 'Container', description: 'Active session JWT token display inspector', stable: true },
+
+  // Module 7: Mini Store App
+  { module: 'Module 7: Store', route: '/store', testId: 'btn-add-to-cart-{id}', elementType: 'Button', description: 'Add item to shopping cart button', stable: true },
+  { module: 'Module 7: Store', route: '/store', testId: 'cart-icon-count', elementType: 'Container', description: 'Header shopping cart item counter badge', stable: true },
+  { module: 'Module 7: Store', route: '/store', testId: 'cart-drawer-toggle', elementType: 'Button', description: 'Open cart sidebar drawer button', stable: true },
+  { module: 'Module 7: Store', route: '/store', testId: 'cart-item-qty-inc-{id}', elementType: 'Button', description: 'Increase item quantity in cart', stable: true },
+  { module: 'Module 7: Store', route: '/store', testId: 'cart-item-qty-dec-{id}', elementType: 'Button', description: 'Decrease item quantity in cart', stable: true },
+  { module: 'Module 7: Store', route: '/store', testId: 'btn-checkout', elementType: 'Button', description: 'Proceed to checkout button', stable: true },
+  { module: 'Module 7: Store', route: '/store', testId: 'toggle-payment-outcome', elementType: 'Checkbox', description: 'Toggle switch for Payment Success vs Failure simulation', stable: true },
+  { module: 'Module 7: Store', route: '/store', testId: 'tab-manage-inventory', elementType: 'Button', description: 'Admin-only Manage Inventory tab switcher', stable: true },
+
+  // Module 8: Challenges
+  { module: 'Module 8: Challenges', route: '/challenges', testId: 'dynamic-id-element', elementType: 'Button', description: 'Button whose HTML ID changes randomly on every render (no stable ID)', stable: false },
+  { module: 'Module 8: Challenges', route: '/challenges', testId: 'btn-delayed-enable', elementType: 'Button', description: 'Button that becomes enabled only after random 1 to 4 second delay', stable: true },
+  { module: 'Module 8: Challenges', route: '/challenges', testId: 'shadow-host-component', elementType: 'Custom', description: 'Shadow DOM host custom web component containing encapsulated controls', stable: true },
+  { module: 'Module 8: Challenges', route: '/challenges', testId: 'btn-flaky-click', elementType: 'Button', description: 'Flaky button that ignores clicks 30% of the time to test Playwright retry logic', stable: true },
+  { module: 'Module 8: Challenges', route: '/challenges', testId: 'btn-obscured-target', elementType: 'Button', description: 'Button temporarily covered by an overlapping banner for 3 seconds', stable: true }
+];
